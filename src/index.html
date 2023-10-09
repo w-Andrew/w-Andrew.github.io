@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+    <div class="bg-green-500 text-black p-16 text-center text-2xl">
+        <h1 class="font-bold">Unit Conversion</h1>
+        <button class="bg-gray-500 rounded-md p-2 font-bold text-lg" onclick="setConversion(1);">Weight</button>
+        <button class="bg-gray-500 rounded-md p-2 font-bold text-lg" onclick="setConversion(3);">Distance</button>
+        <button class="bg-gray-500 rounded-md p-2 font-bold text-lg" onclick="setConversion(5);">Temperature</button>
+    </div>
+    <div class="bg bg-gray-400 text-center">
+        <!-- add drop down box that will allow for converting both ways// or a button that changes when clicked...
+            can add to the JS to make a fancy button if we want-->
+        <div class="p2 flex flex-row justify-center content-evenly font-bold text-lg snap-center">
+            <h1 class="p-2" id="option1">Lbs</h1>
+            <h1 class="p-2"> -> </h1>
+            <h1 class="p-2" id="option2">Kgs</h1>
+        </div>
+        <button class="bg-slate-300 rounded font-bold p-2" onclick="reverseConversion()">Click to Swap!</button>
+
+        <p class="p2 font-bold text-lg">Enter placeholder value or values (comma seperated)</p>
+        <input id="numberInput" placeholder="Enter a number" class="border-2 border-blue-500">
+        <!-- add button for submitting values to be converted -->
+        <button class="bg-slate-300 rounded font-bold p-2" onclick=convertToArray(numberInput.value)>Convert!</button>
+
+        <!-- area to post results -->
+        <p class="bg-gray-500 font-bold text-lg" id="results"></p>
+    </div>
+</body>
+
+</html>
